@@ -76,8 +76,8 @@ class Config():
     # filename_train = "data/coNLL/eng/eng.train.iob"
 
     filename_dev = "data/valid.txt"
-    filename_test = "data/train.txt"
-    filename_train = "data/test.txt" # test
+    filename_test = "data/test.txt"
+    filename_train = "data/train.txt" # test
 
     max_iter = None # if not None, max number of examples in Dataset
 
@@ -88,14 +88,14 @@ class Config():
 
     # training
     train_embeddings = False
-    nepochs          = 15
+    nepochs          = 60
     dropout          = 0.5
     batch_size       = 20
     lr_method        = "adam"
     lr               = 0.001
     lr_decay         = 0.9
     clip             = -1 # if negative, no clipping
-    nepoch_no_imprv  = 3
+    nepoch_no_imprv  = 12
 
     # model hyperparameters
     hidden_size_char = 100 # lstm on chars
