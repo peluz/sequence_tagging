@@ -61,11 +61,11 @@ class Config():
     path_log   = dir_output + "log.txt"
 
     # embeddings
-    dim_word = 300
-    dim_char = 100
+    dim_word = 100
+    dim_char = 30
 
     # glove files
-    filename_glove = "data/glove.6B/glove.6B.{}d.txt".format(dim_word)
+    filename_glove = "data/glove_s100.txt".format(dim_word)
     # trimmed embeddings (created from glove_filename with build_data.py)
     filename_trimmed = "data/glove.6B.{}d.trimmed.npz".format(dim_word)
     use_pretrained = True
@@ -75,7 +75,9 @@ class Config():
     # filename_test = "data/coNLL/eng/eng.testb.iob"
     # filename_train = "data/coNLL/eng/eng.train.iob"
 
-    filename_dev = filename_test = filename_train = "data/test.txt" # test
+    filename_dev = "data/valid.txt"
+    filename_test = "data/train.txt"
+    filename_train = "data/test.txt" # test
 
     max_iter = None # if not None, max number of examples in Dataset
 
